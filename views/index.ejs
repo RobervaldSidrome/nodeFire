@@ -1,0 +1,24 @@
+<%- include('./layout/head') %>
+  <h3>Listagem de Contatos</h3>
+  <table class="highlight">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <td></td>
+      </tr>
+    </thead>
+    <tbdody>
+      <% for (var key in contacts) {%>
+      <tr>
+        <td><%= contacts[key].name%></td>
+        <td><%= contacts[key].email%></td>
+        <td>
+          <a href="/view/<%= key %>" class="btn">Ver</a>
+        </td>
+      </tr>
+      <% }; %>
+    </tbdody>
+  </table>
+  <p><a href="/new" class="btn">Novo</a></p>
+  <%- include('./layout/footer') %>

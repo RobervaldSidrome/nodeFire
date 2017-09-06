@@ -1,0 +1,13 @@
+<%- include('./layout/head') %>
+  <h3>Visualização de dados</h3>
+
+    <p><%= contact.name %></p>
+    <p><%= contact.email %></p>
+
+
+<p>
+    <a href="/" class="btn">Voltar</a>
+    <a href="/edit/<%= id%>" class="btn yellow">Editar</a>
+    <a href="/remove/<%= id%>" class="btn red">Remover</a>
+</p>
+  <%- include('./layout/footer') %>
